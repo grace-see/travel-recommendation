@@ -6,6 +6,8 @@
 
     --my-teal: rgb(0, 94, 94);
     --dark-teal: rgb(0, 71, 71);
+    --button-green: rgb(0, 67, 47);
+    --dark-button-green: rgb(0, 45, 31);
 }
 
 #navbar {
@@ -38,7 +40,7 @@
     align-items: center;
 }
 
-.logo > h1 {
+.logo > p {
     font-weight: normal;
     font-style: italic;
     font-size: 24px;
@@ -84,4 +86,52 @@
     margin-right: 4px;
     font-size: 0.75rem;
     cursor: pointer;
+}
+
+main {
+    color: white;
+    background-image: url('./brazil.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px 20px;
+    
+    display: flex;
+    align-items: center;
+}
+
+#social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+#main-content {
+    margin-left: 48px;
+    width: 80vw;
+}
+
+#main-content > h1 {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+#main-content > p {
+    line-height: 1.25rem;
+    margin-bottom: 20px;
+}
+
+#main-content > button {
+    border: none;
+    color: white;
+    background-color: var(--button-green);
+    cursor: pointer;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+}
+
+#main-content > button:hover {
+    background-color: var(--dark-button-green);
 }
