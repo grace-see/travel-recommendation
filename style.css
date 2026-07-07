@@ -8,6 +8,7 @@
     --dark-teal: rgb(0, 71, 71);
     --button-green: rgb(0, 67, 47);
     --dark-button-green: rgb(0, 45, 31);
+    --muted-blue: rgb(47, 81, 120);
 }
 
 #navbar {
@@ -107,20 +108,27 @@ main {
     gap: 36px;
 }
 
-#main-content {
+#main-content, #about-content {
     margin-left: 48px;
     width: 80vw;
 }
 
-#main-content > h1 {
+#main-content > h1, #about-content > h1 {
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 32px;
 }
 
-#main-content > p {
-    line-height: 1.25rem;
-    margin-bottom: 20px;
+#main-content > p, #about-content > p { 
+    line-height: 1.25rem; 
+}
+
+#main-content > p { 
+    margin-bottom: 20px; 
+}
+
+#about-content > p { 
+    margin-bottom: 8px; 
 }
 
 #main-content > button {
@@ -134,4 +142,32 @@ main {
 
 #main-content > button:hover {
     background-color: var(--dark-button-green);
+}
+
+#our-team {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#our-team > h2 {
+    font-size: 64px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-container > h3 {
+    font-size: 1.4rem;
+}
+
+.title {
+    background-color: var(--muted-blue);
+    border-radius: 16px;
+    padding: 8px 20px;
 }
