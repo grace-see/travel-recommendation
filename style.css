@@ -11,6 +11,10 @@
     --muted-blue: rgb(47, 81, 120);
 }
 
+:root {
+    background-color: var(--my-teal);
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -93,11 +97,11 @@ main {
     color: white;
     background-image: url('./images/brazil.jpg');
     background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     width: 100vw;
     height: 100vh;
     padding: 0px 20px;
-    
+
     display: flex;
     align-items: center;
 }
@@ -108,18 +112,26 @@ main {
     gap: 36px;
 }
 
-#main-content, #about-content {
+.main-div {
     margin-left: 48px;
+}
+
+#main-content, #about-content {
     width: 80vw;
 }
 
-#main-content > h1, #about-content > h1 {
+#contact-content {
+    margin-left: 48px;
+    width: 45vw;
+}
+
+#main-content > h1, #about-content > h1, #contact-content > h1 {
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 32px;
 }
 
-#main-content > p, #about-content > p { 
+#main-content > p, #about-content > p, #contact-content > p { 
     line-height: 1.25rem; 
 }
 
@@ -202,4 +214,51 @@ form > button {
 
 form > button:hover {
     background-color: var(--dark-teal);
+}
+
+.results-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column: 1fr / 1fr;
+}
+
+.entry-container {
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 16px;
+    padding: 24px 8px;
+    border-radius: 8px;
+}
+
+.entry-container > h3 {
+    font-size: 1.15rem;
+    padding: 4px 0;
+}
+
+.entry-container > p {
+    font-size: 0.9rem;
+}
+
+.entry-container > img {
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.search {
+    align-self: flex-start;
+    margin-top: 48px;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
